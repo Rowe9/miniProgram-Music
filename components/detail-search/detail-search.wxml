@@ -1,0 +1,8 @@
+<!--components/detail-search/detail-search.wxml-->
+
+
+<van-search 
+class="search" 
+value="{{ value }}"
+placeholder="请输入搜索关键词"
+bindtap="onSearch" />

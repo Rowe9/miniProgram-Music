@@ -1,0 +1,20 @@
+<!--pages/detail-song/detail-song.wxml-->
+<!-- 巅峰榜item、推荐歌单，热门歌单里的每个menu-item 的列表样式 -->
+
+
+<!--判断当时菜单类型的时候，并且songInfo有值时，不能直接写songInfo因为他原本是一个空对象  -->
+<view class="header" wx:if="{{type==='menu' && songInfo.name}}">
+  <menu-header songInfo="{{songInfo}}"></menu-header>
+</view>
+
+
+<view class="title">{{songInfo.name}}</view>
+<view class="song-list">
+  <block wx:for="{{songInfo.tracks}}" wx:key="id">
+      <song-item-v2 
+      itemData="{{item}}"
+       index="{{index+1}}"
+       bindtap="onSongItemTap"
+       ></song-item-v2>
+  </block>
+</view>

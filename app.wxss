@@ -1,0 +1,10 @@
+/**app.wxss**/
+
+
+page{
+  background-color: #fafafa;
+}
+
+image{
+  vertical-align: top;
+}

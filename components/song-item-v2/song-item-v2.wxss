@@ -1,0 +1,29 @@
+/* components/song-item-v2/song-item-v2.wxss */
+.item{
+display: flex;
+align-items: center;
+margin:20rpx 0
+}
+.index{
+padding:30rpx;
+color:#666;
+font-size:32rpx;
+}
+
+.info .name{
+font-size:35rpx;
+}
+
+.source{
+  display: flex;
+padding-top:10rpx;
+align-items: center;
+}
+.source .icon{
+width:50rpx;
+padding-right:15rpx;
+}
+.source .autor{
+font-size:30rpx;
+color:#666
+}

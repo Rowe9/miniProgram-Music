@@ -1,0 +1,99 @@
+/* pages/detail-search/detail-search.wxss */
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.search{
+  width:85%;
+}
+
+.searchBtn{
+  color:#666;
+}
+/* 搜索历史 */
+.searchHistory{
+  
+  padding:20rpx 30rpx;
+}
+.searchHistory .top{
+  display: flex;
+  justify-content: space-between;
+}
+.searchHistory .top .left{
+  font-size: 32rpx;
+}
+.searchHistory .top.right{
+  color: #666;
+}
+
+/* 热搜榜 */
+.hot-search{
+  padding:30rpx 30rpx;
+  font-size: 32rpx;
+}
+.hot-search .title{
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid rgb(199, 199, 199);
+}
+.hot-search .content{
+  display: flex;
+  
+  flex-wrap: wrap;
+  padding-top: 30rpx;
+}
+.hot-search-item{
+  width:50%;
+  height:80rpx;
+  line-height:80rpx;
+  display: flex;
+  align-items: center;
+  font-size:32rpx;
+}
+ .icon{
+  width: 50rpx;
+  height: 50rpx;
+  padding-left: 10rpx;
+}
+.active{
+  font-weight:700;
+}
+
+.searchHistory .bottom .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.searchHistory .bottom .list .item{
+  margin: 20rpx 10rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #eee;
+  border-radius:15rpx;
+}
+
+/* 搜索结果页面的展示 */
+.result .result-item{
+  padding:20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:34rpx;
+}
+.result .result-item .name{
+  border-bottom: 1px solid #eee;
+  flex:1;
+
+ 
+}
+.bg-cover{
+  position: fixed;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: #fff;
+  z-index:9999;
+
+}
+

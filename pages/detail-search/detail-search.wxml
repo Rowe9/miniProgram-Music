@@ -1,0 +1,58 @@
+<!--pages/detail-search/detail-search.wxml-->
+<wxs module="fmt" src="/utils/format.wxs"></wxs>
+<view class="header">
+<van-search
+  placeholder="{{searchDefault}}"
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+  class="search"
+  shape="round"
+  background="#fff"
+>
+</van-search>
+<!-- 搜索按钮 -->
+<view class="searchBtn" slot="action" bind:tap="onClick">搜索</view>
+</view>
+
+<view class="result" wx:if="{{keywords}}">
+<block wx:for="{{value}}" wx:key="id">
+  <view class="result-item">
+    <view class="icon"><van-icon name="search" /></view>
+    <view class="name" bindtap="onValueNameClick" data-name="{{item.name}}">{{item.name}}</view>
+  </view>
+</block>
+</view>
+
+<!-- 遮罩层 -->
+<view class="bg-cover" style="top: {{top}};" wx:if="{{keywords}}"></view>
+
+
+<!-- 搜索历史 -->
+<view wx:else>
+<view class="searchHistory">
+<view class="top">
+  <view class="left">搜索历史：</view>
+  <view class="right"  bindtap="onDeleteTap"><van-icon name="delete-o" /></view>
+</view>
+<view class="bottom">
+  <view class="list">
+  <block wx:for="{{history}}" wx:key="id">
+    <view class="item">{{item}}</view>
+  </block>
+  </view>
+</view>
+</view>
+
+<view class="hot-search">
+  <view class="title">热搜榜</view>
+  <view class="content">
+  <block wx:for="{{hotsData}}" wx:key="id" data-index="{{index}}">
+  <view class="hot-search-item {{index<3?'active':''}}" bindtap="onHotItemTap" data-item="{{item.searchWord}}">
+      {{fmt.padLeft(index + 1)}} {{item.searchWord}} 
+      <image class="icon"  src="{{item.iconUrl}}" mode="widthFix"/>
+    </view>
+  </block>
+</view>
+</view>
+</view>

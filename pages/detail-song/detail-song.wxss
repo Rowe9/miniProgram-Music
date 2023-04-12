@@ -1,0 +1,6 @@
+/* pages/detail-song/detail-song.wxss */
+.title{
+  font-size:45rpx;
+  font-weight:700;
+  padding:20rpx;
+}

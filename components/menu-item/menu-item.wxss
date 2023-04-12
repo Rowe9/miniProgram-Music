@@ -1,0 +1,40 @@
+/* components/menu-item/menu-item.wxss */
+.menu-item{
+  display: inline-block;
+  width: 100%;
+}
+
+.top{
+position: relative;
+}
+.top .image{
+width: 100%;
+border-radius: 12rpx;
+/* 会根据具体的大小保证图片的原宽高比，并保证一定会覆盖整个背景 */
+background-size: cover;
+
+}
+.top .count{
+position: absolute;
+bottom: 0;
+right:0;
+color:#fff;
+padding: 6rpx 10rpx;
+background: rgba(0,0,0, .5);
+border-radius: 12rpx;
+font-size: 22rpx;
+}
+.bottom{
+width: 100%;
+font-size:26rpx;
+
+/* 显示两行文字,white-space:nowrap是一行显示不换行 */
+white-space: normal;
+
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow:hidden;
+
+}
