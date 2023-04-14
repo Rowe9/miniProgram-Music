@@ -80,7 +80,13 @@ Page({
   // 热搜榜数据的点击
   onHotItemTap(event){
     const click=event.currentTarget.dataset.item
-    const newArr=[]
+
+    const index=this.data.history.indexOf(click)
+    // 如果找到了相同的值
+    if(index!==-1){
+      // 删除相同的值
+      const same=this.data.history.splice(index,1)
+    }
     // 把旧的数据，和新的数据都放到数组里面
     this.setData({history:[click,...this.data.history]})
   },
